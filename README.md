@@ -1,73 +1,40 @@
-# React + TypeScript + Vite
+# 99Tech Code Challenge - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains solutions for a set of frontend development tasks using **ReactJS, TypeScript, and modern frontend tools**.  
+Challenge link: [99Tech Code Challenge](https://s5tech.notion.site/Code-Challenge-05cdb9e0d1ce432a843f763b5d5f7497?p=20bf71f8e9de4228b606f240c446b722&pm=s)
 
-Currently, two official plugins are available:
+This repo contains solutions for three frontend tasks using **ReactJS**, **TypeScript**, and **Tailwind CSS**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Problem 1: Three Ways to Sum to N
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Interactive page to calculate the sum from `1` to `n` using three methods:
+  1. **Iterative:** `for` loop.
+  2. **Formula:** `n * (n + 1) / 2`.
+  3. **Recursive:** sums via recursion.
+- Displays **code snippet + result** for each method.
+- Implemented with React functional components and `useState`.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Problem 2: Fancy Form (Currency Swap)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Responsive currency swap form with **interactive validation**.
+- Uses token icons ([Switcheo token SVGs](https://github.com/Switcheo/token-icons)) and live prices ([JSON](https://interview.switcheo.com/prices.json)).
+- Implemented with **React + Tailwind CSS**, mobile-friendly.
+- Bonus: Compatible with **Vite**.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Problem 3: Messy React (Wallet Component)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Analyzed code for **inefficiencies / anti-patterns**:
+  - Multiple `getPriority` calls.
+  - Inline calculations in render.
+  - Unsafe key selection.
+  - Unused interfaces/props.
+- Refactored for:
+  - `useMemo` optimization.
+  - Safe key and price handling.
+  - Cleaner, type-safe, and performant rendering.
