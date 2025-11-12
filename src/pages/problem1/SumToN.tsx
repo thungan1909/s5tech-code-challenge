@@ -48,22 +48,24 @@ export default function SumToN() {
     "const sum_to_n_c = (num: number): number => (num <= 1 ? num : num + sum_to_n_c(num - 1));";
 
   return (
-    <div className="bg-gray-900 max-w-5xl rounded-3xl shadow-2xl p-8">
-      <h1 className="text-2xl font-bold mb-2 text-green-400 text-center">
-        Three ways to sum to n
-      </h1>
-      <p className="text-sm text-slate-300 text-center mb-6">
-        Enter a number and see three different methods to calculate the sum from
-        1 to n.
-      </p>
-      <div className="w-full mx-auto bg-gray-900 text-white rounded-2xl p-6 shadow-lg space-y-4">
-        <div className="flex space-x-2">
+    <div className="bg-gray-900 min-h-screen flex flex-col items-center p-4 sm:p-8">
+      <div className="w-full max-w-3xl rounded-3xl shadow-2xl p-6 sm:p-8 bg-gray-900 space-y-6">
+        <h1 className="text-2xl sm:text-3xl font-bold text-green-400 text-center">
+          Three ways to sum to n
+        </h1>
+        <p className="text-sm sm:text-base text-slate-300 text-center">
+          Enter a number and see three different methods to calculate the sum
+          from 1 to n.
+        </p>
+
+        {/* Input and button */}
+        <div className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
           <input
             type="number"
             value={n}
             onChange={(e) => setN(Number(e.target.value))}
-            className="flex-1 bg-gray-800 text-white p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400"
             placeholder="Enter n"
+            className="flex-1 bg-gray-800 text-white p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400"
           />
           <button
             onClick={runAll}
@@ -73,6 +75,7 @@ export default function SumToN() {
           </button>
         </div>
 
+        {/* Results */}
         {results.iterative !== undefined && (
           <div className="space-y-6">
             {[
@@ -96,7 +99,7 @@ export default function SumToN() {
                 key={item.title}
                 className="bg-gray-800 p-4 rounded-2xl shadow-inner space-y-2"
               >
-                <h2 className="font-semibold text-lg text-green-400">
+                <h2 className="font-semibold text-lg sm:text-xl text-green-400">
                   {item.title}
                 </h2>
                 <SyntaxHighlighter

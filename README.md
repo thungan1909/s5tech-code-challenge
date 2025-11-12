@@ -20,9 +20,17 @@ This repo contains solutions for three frontend tasks using **ReactJS**, **TypeS
 
 ## Problem 2: Fancy Form (Currency Swap)
 
-- Responsive currency swap form with **interactive validation**.
-- Uses token icons ([Switcheo token SVGs](https://github.com/Switcheo/token-icons)) and live prices ([JSON](https://interview.switcheo.com/prices.json)).
-- Implemented with **React + Tailwind CSS**, mobile-friendly.
+- Responsive currency swap form implemented as a React component (`SwapForm`).
+- Features:
+
+  - Select "From" and "To" currencies from a dropdown.
+  - Input amount and see **real-time converted value**.
+  - Swap button to switch currencies.
+  - Displays current exchange rate and loading spinner while fetching.
+  - Prices fetched via utility function `fetchPricesByIds`.
+  - Converts CoinGecko IDs to symbols and returns `{ currency, price }`.
+
+- Implemented with **React + Tailwind CSS**
 - Bonus: Compatible with **Vite**.
 
 ---
@@ -32,9 +40,10 @@ This repo contains solutions for three frontend tasks using **ReactJS**, **TypeS
 - Analyzed code for **inefficiencies / anti-patterns**:
   - Multiple `getPriority` calls.
   - Inline calculations in render.
-  - Unsafe key selection.
+  - Unsafe key selection in maps.
   - Unused interfaces/props.
 - Refactored for:
   - `useMemo` optimization.
-  - Safe key and price handling.
+  - Combined formatting and calculation in one pass.
+  - Safe key handling and type-safe price lookup.
   - Cleaner, type-safe, and performant rendering.
