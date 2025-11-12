@@ -18,7 +18,7 @@ export const SwapButton: React.FC = () => {
       className={`w-full py-3 mt-2 rounded-xl font-bold transition ${
         loading
           ? "bg-gray-600 text-gray-300 cursor-not-allowed"
-          : "bg-primary text-black hover:bg-green-400"
+          : "bg-green-800 text-black hover:bg-green-400"
       }`}
     >
       {loading ? "Swapping..." : "SWAP"}

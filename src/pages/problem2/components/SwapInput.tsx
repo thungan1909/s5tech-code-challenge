@@ -1,8 +1,9 @@
 // src/components/SwapInput.tsx
 import React from "react";
-import { CurrencySelect, type Currency } from "./CurrencySelect";
+import { CurrencySelect } from "./CurrencySelect";
+import type { Currency } from "./SwapForm";
 
-interface Props {
+interface SwapInputProps {
   label: string;
   amount: string;
   onAmountChange?: (val: string) => void;
@@ -12,7 +13,7 @@ interface Props {
   options?: Currency[];
 }
 
-export const SwapInput: React.FC<Props> = ({
+export const SwapInput: React.FC<SwapInputProps> = ({
   label,
   amount,
   onAmountChange,
