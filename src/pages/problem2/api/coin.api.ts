@@ -1,4 +1,4 @@
-import { COINGECKO_ENDPOINTS } from "../constant/const";
+import { COINGECKO_ENDPOINTS } from "../const";
 import type { Coin } from "../types/coin";
 
 export const fetchCoinList = async () => {

@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from "react";
 
 import { FaSpinner } from "react-icons/fa";
-import type { TokenPrice } from "../../api/price.api";
-import { fetchCoinList } from "../../api/coin.api";
-import type { Coin } from "../../types/coin";
-import { CRYPTO_IDS } from "../../constant/const";
+
+import type { Coin } from "./types/coin";
+import { CRYPTO_IDS } from "./const";
 import { SwapInput } from "./components/SwapInput";
 import { SwapButton } from "./components/SwapButton";
-import { fetchPricesByIds } from "../../utils/fetchPricesBySymbols";
-
-export interface Currency {
-  code: string;
-  name: string;
-  icon: string;
-}
+import { fetchPricesByIds } from "./utils/fetchPricesBySymbols";
+import { fetchCoinList } from "./api/coin.api";
+import type { TokenPrice } from "./api/price.api";
+import type { Currency } from "./types/currency";
 
 export const SwapForm: React.FC = () => {
   const [fromCurrency, setFromCurrency] = useState("ETH");

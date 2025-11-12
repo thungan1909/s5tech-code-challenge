@@ -1,4 +1,3 @@
-// src/components/SwapButton.tsx
 import React, { useState } from "react";
 
 export const SwapButton: React.FC = () => {
@@ -6,7 +5,7 @@ export const SwapButton: React.FC = () => {
 
   const handleClick = async () => {
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1500)); // simulate API delay
+    await new Promise((r) => setTimeout(r, 1500));
     setLoading(false);
     alert("Swap completed successfully!");
   };

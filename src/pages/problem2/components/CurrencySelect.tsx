@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import type { Currency } from "./SwapForm";
+import type { Currency } from "../types/currency";
 
 interface SwapSelectProps {
   value: string;

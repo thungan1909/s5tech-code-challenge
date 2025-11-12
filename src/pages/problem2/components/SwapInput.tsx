@@ -1,7 +1,7 @@
 // src/components/SwapInput.tsx
 import React from "react";
 import { CurrencySelect } from "./CurrencySelect";
-import type { Currency } from "./SwapForm";
+import type { Currency } from "../types/currency";
 
 interface SwapInputProps {
   label: string;
