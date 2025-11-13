@@ -6,10 +6,10 @@ import type { Coin } from "./types/coin";
 import { CRYPTO_IDS } from "./const";
 import { SwapInput } from "./components/SwapInput";
 import { SwapButton } from "./components/SwapButton";
-import { fetchPricesByIds } from "./utils/fetchPricesBySymbols";
 import { fetchCoinList } from "./api/coin.api";
-import type { TokenPrice } from "./api/price.api";
 import type { Currency } from "./types/currency";
+import type { TokenPrice } from "./types/token";
+import { fetchPricesByIds } from "./api/price.api";
 
 export const SwapForm: React.FC = () => {
   const [fromCurrency, setFromCurrency] = useState("ETH");
