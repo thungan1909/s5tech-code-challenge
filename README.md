@@ -2,7 +2,7 @@
 
 This repository contains solutions for a set of frontend development tasks using **ReactJS, TypeScript, and modern frontend tools**.  
 Challenge link: [99Tech Code Challenge](https://s5tech.notion.site/Code-Challenge-05cdb9e0d1ce432a843f763b5d5f7497?p=20bf71f8e9de4228b606f240c446b722&pm=s)
-
+Live demo: [99Tech Code Live Demo](https://s5tech-code-challenge.vercel.app/)
 This repo contains solutions for three frontend tasks using **ReactJS**, **TypeScript**, and **Tailwind CSS**.
 
 ---
