@@ -16,18 +16,18 @@ type Blockchain =
   | "Neo"
   | string;
 
-interface WalletBalance {
-  currency: string;
-  amount: number;
-  blockchain: Blockchain; // added
-}
+// interface WalletBalance {
+//   currency: string;
+//   amount: number;
+//   blockchain: Blockchain; // added
+// }
 
 // [Refactor 2] Use inheritance to avoid duplication
 // Reason: FormattedWalletBalance extends WalletBalance for cleaner structure.
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-interface FormattedWalletBalance extends WalletBalance {
-  formatted: string;
-}
+// interface FormattedWalletBalance extends WalletBalance {
+//   formatted: string;
+// }
 
 // [Refactor 3] Moved getPriority() outside component
 // Reason: It doesn't depend on props/state — avoids re-creation on every render.
